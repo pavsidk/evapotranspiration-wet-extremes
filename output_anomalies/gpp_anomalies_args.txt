@@ -1,0 +1,7 @@
+{
+  "best_event_path": "new_runs/RF/gpp_anomalies/event.csv",
+  "best_test_path": "new_runs/RF/gpp_anomalies/test.csv",
+  "output_findevents_dir": "/Users/pavan/Documents/ERICA RESEARCH/testing/wet-extremes-photosynthesis-main/output_findevents",
+  "out_name": "gpp_anomalies",
+  "metadata_path": "metadata_total.csv"
+}

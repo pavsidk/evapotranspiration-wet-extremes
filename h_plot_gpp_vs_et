@@ -1,0 +1,97 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+et = pd.read_csv(
+    "runs/RF/RF_run_with_lagged_et02/events_iqr.csv",
+    low_memory=False
+)
+
+gpp = pd.read_csv(
+    "gpp_paper/revision_lagged_gpp_12_remove_medium/events_iqr.csv",
+    low_memory=False
+)
+
+gpp_sites = set(gpp[gpp["R2"] > 0.7]["SITE_ID"].unique())
+et_sites  = set(et[et["R2"]  > 0.7]["SITE_ID"].unique())
+
+shared_sites = gpp_sites & et_sites
+
+gpp_shared = gpp[gpp["SITE_ID"].isin(shared_sites)]
+et_shared  = et[et["SITE_ID"].isin(shared_sites)]
+
+merged = pd.merge(
+    gpp_shared,
+    et_shared,
+    on=["SITE_ID", "day"],
+    how="inner",
+    suffixes=("_gpp", "_et")
+)
+
+if "IGBP_gpp" in merged.columns:
+    igbp_col = "IGBP_gpp"
+elif "IGBP_et" in merged.columns:
+    igbp_col = "IGBP_et"
+else:
+    raise ValueError("No IGBP column found after merge")
+
+x = merged["anomaly_norm_gpp"]
+y = merged["anomaly_norm_et"]
+igbp = merged[igbp_col]
+
+valid = x.notna() & y.notna() & igbp.notna()
+x = x[valid]
+y = y[valid]
+igbp = igbp[valid]
+
+color_map = {
+    "ENF": "#1b5e20",   # Evergreen Needleleaf Forest
+    "DBF": "#2e7d32",   # Deciduous Broadleaf Forest
+    "EBF": "#004d40",   # Evergreen Broadleaf Forest
+    "MF":  "#66bb6a",   # Mixed Forest
+    
+    "GRA": "#d4a373",   # Grasslands
+    "SAV": "#f4a261",   # Savannas
+    "WSA": "#bc6c25",   # Woody Savannas
+    
+    "CSH": "#6a994e",   # Closed Shrubland
+    "OSH": "#a7c957"    # Open Shrubland
+}
+
+default_color = "gray"
+
+m, b = np.polyfit(x, y, 1)
+
+plt.figure(figsize=(8, 6))
+
+for biome in igbp.unique():
+    mask = igbp == biome
+    
+    plt.scatter(
+        x[mask],
+        y[mask],
+        label=biome,
+        alpha=0.5,
+        color=color_map.get(biome, default_color)
+    )
+
+x_line = np.linspace(x.min(), x.max(), 100)
+plt.plot(x_line, m * x_line + b)
+
+lims = [
+    min(x.min(), y.min()),
+    max(x.max(), y.max())
+]
+plt.plot(lims, lims)
+
+plt.xlabel("Normalized GPP Anomaly")
+plt.ylabel("Normalized ET Anomaly")
+plt.title("GPP vs ET Anomalies by IGBP Class")
+plt.axis([-5, 5, -5, 5])
+plt.grid(True)
+plt.legend(title="IGBP", bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.savefig(
+    "figs/NEW_FIGS/gpp_vs_et_igbp_colored.png",
+    dpi=300
+)

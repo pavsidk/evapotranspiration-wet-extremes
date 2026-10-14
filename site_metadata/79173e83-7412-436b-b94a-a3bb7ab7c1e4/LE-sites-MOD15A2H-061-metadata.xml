@@ -1,0 +1,2003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmi:MI_Metadata
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.isotc211.org/2005/gmi https://ngdc.noaa.gov/metadata/published/xsd/schema.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:gco="http://www.isotc211.org/2005/gco"
+  xmlns:gmd="http://www.isotc211.org/2005/gmd"
+  xmlns:gmx="http://www.isotc211.org/2005/gmx"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gss="http://www.isotc211.org/2005/gss"
+  xmlns:gts="http://www.isotc211.org/2005/gts"
+  xmlns:gsr="http://www.isotc211.org/2005/gsr"
+  xmlns:gmi="http://www.isotc211.org/2005/gmi"
+  xmlns:srv="http://www.isotc211.org/2005/srv">
+
+
+  <!-- FILE IDENTIFIER -->
+  <gmd:fileIdentifier>
+    <gco:CharacterString>LE-sites-MOD15A2H-061-metadata.xml</gco:CharacterString>
+  </gmd:fileIdentifier>
+
+  <!-- METADATA AND RESOURCE LANGUAGE -->
+  <gmd:language>
+    <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">eng
+    </gmd:LanguageCode>
+  </gmd:language>
+
+  <!-- CHARACTER SET -->
+  <gmd:characterSet>
+    <gmd:MD_CharacterSetCode
+      codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode"
+      codeListValue="UTF8">UTF8
+    </gmd:MD_CharacterSetCode>
+  </gmd:characterSet>
+
+  <!-- HIERARCHY LEVEL -->
+  <gmd:hierarchyLevel>
+    <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
+                      codeListValue="series">series
+    </gmd:MD_ScopeCode>
+  </gmd:hierarchyLevel>
+
+  <!-- CONTACT INFORMATION -->
+  <gmd:contact>
+    <gmd:CI_ResponsibleParty>
+      <gmd:organisationName>
+        <gco:CharacterString>LP DAAC at The EROS Center</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:contactInfo>
+        <gmd:CI_Contact>
+          <gmd:phone>
+            <gmd:CI_Telephone>
+              <gmd:voice>
+                <gco:CharacterString>605-594-6116</gco:CharacterString>
+              </gmd:voice>
+              <gmd:voice>
+                <gco:CharacterString>866-573-3222 (866-LPE-DAAC)</gco:CharacterString>
+              </gmd:voice>
+              <gmd:facsimile>
+                <gco:CharacterString>605-594-6963</gco:CharacterString>
+              </gmd:facsimile>
+            </gmd:CI_Telephone>
+          </gmd:phone>
+          <gmd:address>
+            <gmd:CI_Address>
+              <gmd:deliveryPoint>
+                <gco:CharacterString>Mundt Federal Building</gco:CharacterString>
+              </gmd:deliveryPoint>
+              <gmd:city>
+                <gco:CharacterString>Sioux Falls</gco:CharacterString>
+              </gmd:city>
+              <gmd:administrativeArea>
+                <gco:CharacterString>SD</gco:CharacterString>
+              </gmd:administrativeArea>
+              <gmd:postalCode>
+                <gco:CharacterString>57198</gco:CharacterString>
+              </gmd:postalCode>
+              <gmd:country>
+                <gco:CharacterString>United States</gco:CharacterString>
+              </gmd:country>
+              <gmd:electronicMailAddress>
+                <gco:CharacterString>LPDAAC@usgs.gov</gco:CharacterString>
+              </gmd:electronicMailAddress>
+            </gmd:CI_Address>
+          </gmd:address>
+          <gmd:onlineResource>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>https://lpdaac.usgs.gov/</gmd:URL>
+              </gmd:linkage>
+            </gmd:CI_OnlineResource>
+          </gmd:onlineResource>
+        </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+                         codeListValue="pointOfContact" codeSpace="007">pointOfContact
+        </gmd:CI_RoleCode>
+      </gmd:role>
+    </gmd:CI_ResponsibleParty>
+  </gmd:contact>
+
+  <!-- METADATA DATE -->
+  <gmd:dateStamp>
+    <gco:Date>2026-01-19</gco:Date>
+  </gmd:dateStamp>
+
+  <!-- METADATA STANDARD NAME -->
+  <gmd:metadataStandardName>
+    <gco:CharacterString>ISO 19115-2 Geographic Information - Metadata Part 2 Extensions for imagery and gridded data
+    </gco:CharacterString>
+  </gmd:metadataStandardName>
+
+  <!-- METADATA VERSION -->
+  <gmd:metadataStandardVersion>
+    <gco:CharacterString>ISO 19115-2:2009</gco:CharacterString>
+  </gmd:metadataStandardVersion>
+
+  <!-- SPATIAL REPRESENTATION -->
+  <gmd:spatialRepresentationInfo>
+    <gmd:MD_VectorSpatialRepresentation>
+      <gmd:topologyLevel>
+        <gmd:MD_TopologyLevelCode
+          codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#MD_TopologyLevelCode"
+          codeListValue="geometryOnly">geometryOnly
+        </gmd:MD_TopologyLevelCode>
+      </gmd:topologyLevel>
+      <gmd:geometricObjects>
+        <gmd:MD_GeometricObjects>
+          <gmd:geometricObjectType>
+            <gmd:MD_GeometricObjectTypeCode
+              codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#MD_GeometricObjectTypeCode"
+              codeListValue="point">point
+            </gmd:MD_GeometricObjectTypeCode>
+          </gmd:geometricObjectType>
+          <gmd:geometricObjectCount>
+            <gco:Integer>267</gco:Integer>
+          </gmd:geometricObjectCount>
+        </gmd:MD_GeometricObjects>
+      </gmd:geometricObjects>
+    </gmd:MD_VectorSpatialRepresentation>
+  </gmd:spatialRepresentationInfo>
+
+  <!-- DATA INFORMATION -->
+  <gmd:identificationInfo>
+    <gmd:MD_DataIdentification>
+      <gmd:citation>
+        <gmd:CI_Citation>
+          <gmd:title>
+            <gco:CharacterString>MOD15A2H.061</gco:CharacterString>
+          </gmd:title>
+          <gmd:alternateTitle>
+            <gco:CharacterString>Leaf Area Index (LAI) and Fraction of Photosynthetically Active Radiation (FPAR)</gco:CharacterString>
+          </gmd:alternateTitle>
+          <gmd:date>
+            <gmd:CI_Date>
+              <gmd:date>
+                <gco:Date>2026-01-19</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+                <gmd:CI_DateTypeCode
+                  codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                  codeListValue="creation">creation
+                </gmd:CI_DateTypeCode>
+              </gmd:dateType>
+            </gmd:CI_Date>
+          </gmd:date>
+          <gmd:identifier>
+            <gmd:MD_Identifier>
+              <gmd:code>
+                <gmx:Anchor
+                  xlink:href="https://doi.org/10.5067/MODIS/MOD15A2H.061"
+                  xlink:title="DOI"
+                  xlink:actuate="onRequest">
+                    10.5067/MODIS/MOD15A2H.061
+                </gmx:Anchor>
+              </gmd:code>
+             </gmd:MD_Identifier>
+          </gmd:identifier>
+        </gmd:CI_Citation>
+      </gmd:citation>
+      <gmd:abstract>
+        <gco:CharacterString>
+          The Application for Extracting and Exploring Analysis Ready Samples (AppEEARS) offers a simple and efficient
+          way to access and transform geospatial data from a variety of federal data archives. AppEEARS enables users
+          to subset geospatial datasets using spatial, temporal, and band/layer parameters. Two types of sample
+          requests are available: point samples for geographic coordinates and area samples for spatial areas via
+          vector polygons. Sample requests submitted to AppEEARS provide users not only with data values, but also
+          associated quality data values. Interactive visualizations with summary statistics are provided for each
+          sample within the application, which allow users to preview and interact with their samples before
+          downloading their data.
+        </gco:CharacterString>
+      </gmd:abstract>
+      <gmd:resourceConstraints>
+        <gmd:MD_LegalConstraints>
+          <gmd:useLimitation>
+            <gco:CharacterString>Disclaimer - While every effort has been made to ensure that these data are accurate
+              and reliable within the limits of the current state of the art, NASA cannot assume liability for any
+              damages caused by any errors or omissions in the data, nor as a result of the failure of the data to
+              function on a particular system. NASA makes no warranty, expressed or implied, nor does the fact of
+              distribution constitute such a warranty.
+            </gco:CharacterString>
+          </gmd:useLimitation>
+        </gmd:MD_LegalConstraints>
+      </gmd:resourceConstraints>
+      <gmd:spatialResolution>
+        <gmd:MD_Resolution>
+          <gmd:distance>
+            <gco:Distance uom="meters">500</gco:Distance>
+          </gmd:distance>
+        </gmd:MD_Resolution>
+      </gmd:spatialResolution>
+      <gmd:language>
+        <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">eng
+        </gmd:LanguageCode>
+      </gmd:language>
+      <gmd:extent>
+        <gmd:EX_Extent>
+          <gmd:temporalElement>
+            <gmd:EX_TemporalExtent>
+              <gmd:extent>
+                <gml:TimeNode gml:id="TemporalGranularity">
+                  <gml:description>8 day</gml:description>
+                </gml:TimeNode>
+              </gmd:extent>
+            </gmd:EX_TemporalExtent>
+          </gmd:temporalElement>
+        </gmd:EX_Extent>
+      </gmd:extent>
+      <gmd:supplementalInformation>
+        <gco:CharacterString>Myneni, R., Knyazikhin, Y., & Park, T. (2021). MODIS/Terra Leaf Area Index/FPAR 8-Day L4 Global 500m SIN Grid V061. NASA Land Processes Distributed Active Archive Center. https://doi.org/10.5067/MODIS/MOD15A2H.061
+
+Kern, S. (2024). MODIS Collection 6.1 global 8-daily LAI and FAPAR (Version 2024_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.14185
+
+Kern, S. (2025). MODIS Collection 6.1 global 8-daily LAI and FAPAR (Version 2025_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.8584
+
+Kern, S. (2022). MODIS Collection 6.1 global 8-daily LAI and FAPAR (Version 2022_fv0.03). Universität Hamburg. https://doi.org/10.25592/UHHFDM.10863
+
+Kern, S. (2025). MODIS Collection 6.1 global 8-daily LAI and FAPAR (Version 2025_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.16752
+
+Kern, S. (2023). MODIS Collection 6.1 Sinusoidal Tiles 8-daily LAI and FAPAR (Version 2023_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.11776
+
+Kern, S. (2025). MODIS Collection 6.1 Sinusoidal Tiles 8-daily LAI and FAPAR (Version 2025_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.10866
+
+Kern, S. (2022). MODIS Collection 6.1 Sinusoidal Tiles 8-daily LAI and FAPAR (Version 2022_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.10867
+
+Kern, S. (2024). MODIS Collection 6.1 Sinusoidal Tiles 8-daily LAI and FAPAR (Version 2024_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.14184
+
+Kern, S. (2025). MODIS Collection 6.1 Sinusoidal Tiles 8-daily LAI and FAPAR (Version 2025_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.16751
+
+Kern, S. (2023). MODIS Collection 6.1 global 8-daily LAI and FAPAR (Version 2023_fv0.01). Universität Hamburg. https://doi.org/10.25592/UHHFDM.11777. Accessed January 19, 2026.</gco:CharacterString>
+      </gmd:supplementalInformation>
+      <gmd:supplementalInformation>
+        <gco:CharacterString>AppEEARS Team. (2026). Application for Extracting and Exploring Analysis Ready Samples (AppEEARS). Ver. 3.107. NASA EOSDIS Land Processes Distributed Active Archive Center (LP DAAC), USGS/Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, USA. Accessed January 19, 2026. https://appeears.earthdatacloud.nasa.gov</gco:CharacterString>
+      </gmd:supplementalInformation>
+    </gmd:MD_DataIdentification>
+  </gmd:identificationInfo>
+
+  <!-- SOURCE AND PROCESSING INFORMATION -->
+  <gmd:dataQualityInfo>
+    <gmd:DQ_DataQuality>
+      <gmd:scope>
+        <gmd:DQ_Scope>
+          <gmd:level>
+            <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
+                              codeListValue="dataset">dataset
+            </gmd:MD_ScopeCode>
+          </gmd:level>
+          <gmd:extent>
+            <gmd:EX_Extent>
+              <gmd:description>
+                <gco:CharacterString>Extracted points</gco:CharacterString>
+              </gmd:description>
+              <gmd:geographicElement>
+                <gmd:EX_BoundingPolygon>
+                  <gmd:polygon>
+                    <gml:MultiPoint gml:id="ID">
+                      <gml:pointMembers>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AR-SLu
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-33.4648 -66.4598</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AR-Vir
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-28.2395 -56.1886</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AT-Neu
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.1167 11.3175</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-ASM
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-22.283 133.249</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Ade
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-13.0769 131.1178</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Cpr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-34.0021 140.5891</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Cum
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-33.6152 150.7236</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-DaP
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-14.0633 131.3181</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-DaS
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-14.1593 131.3881</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Dry
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-15.2588 132.3706</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Emr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-23.8587 148.4746</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Fog
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-12.5452 131.3072</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-GWW
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-30.1913 120.6541</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Gin
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-31.3764 115.7138</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-How
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-12.4943 131.1523</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Lox
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-34.4704 140.6551</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-RDF
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-14.5636 132.4776</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Rig
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-36.6499 145.5759</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Rob
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-17.1175 145.6301</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Stp
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-17.1507 133.3502</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-TTE
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-22.287 133.64</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Tum
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-35.6566 148.1517</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Wac
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-37.4259 145.1878</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Whr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-36.6732 145.0294</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Wom
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-37.4222 144.0944</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">AU-Ync
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-34.9893 146.2907</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BE-Bra
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>51.3076 4.5198</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BE-Lon
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.5516 4.7462</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BE-Vie
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.3049 5.9981</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BR-Npw
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-16.498 -56.412</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BR-Sa1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-2.8567 -54.9589</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BR-Sa3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-3.018 -54.9714</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BW-Gum
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-18.9647 22.3711</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">BW-Nxr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-19.5481 23.1792</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-Gro
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>48.2167 -82.1556</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-Man
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.8796 -98.4808</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-NS1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.8792 -98.4839</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-NS2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.9058 -98.5247</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-NS3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.9117 -98.3822</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-NS4
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.9144 -98.3806</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-NS5
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.8631 -98.485</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-NS6
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.9167 -98.9644</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-NS7
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>56.6358 -99.9483</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-Oas
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>53.6289 -106.1978</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-Obs
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>53.9872 -105.1178</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-Qfo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>49.6925 -74.3421</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-SCB
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>61.3089 -121.2984</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-SCC
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>61.3079 -121.2992</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-SF1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>54.485 -105.8176</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-SF2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>54.2539 -105.8775</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-SF3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>54.0916 -106.0053</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-TP1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.6609 -80.5595</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-TP2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.7744 -80.4588</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-TP3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.7068 -80.3483</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-TP4
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.7102 -80.3574</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CA-TPD
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.6353 -80.5577</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CG-Tch
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-4.2892 11.6564</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CH-Cha
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.2102 8.4104</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CH-Dav
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.8153 9.8559</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CH-Fru
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.1158 8.5378</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CH-Lae
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.4783 8.3644</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CH-Oe1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.2858 7.7319</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CH-Oe2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.2864 7.7337</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Cha
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.4025 128.0958</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Cng
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.5934 123.5092</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Dan
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>30.4978 91.0664</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Din
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>23.1733 112.5361</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Du2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.0467 116.2836</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Du3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.0551 116.2809</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Ha2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>37.6086 101.3269</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-HaM
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>37.37 101.18</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Hgu
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>32.8453 102.59</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Qia
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>26.7414 115.0581</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CN-Sw2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.7902 111.8971</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CZ-BK1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>49.5021 18.5369</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CZ-BK2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>49.4944 18.5429</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">CZ-wet
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>49.0247 14.7704</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Akm
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>53.8662 13.6834</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Dgw
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>53.1514 13.0543</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Geb
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>51.0997 10.9146</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Gri
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.95 13.5126</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Hai
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>51.0792 10.4522</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Hte
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>54.2103 12.1761</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Kli
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.8931 13.5224</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Lkb
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>49.0996 13.3047</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Lnf
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>51.3282 10.3678</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Obe
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.7867 13.7213</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-RuR
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.6219 6.3041</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-RuS
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.8659 6.4471</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Seh
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.8706 6.4497</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-SfN
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.8064 11.3275</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Spw
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>51.8922 14.0337</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Tha
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>50.9626 13.5651</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DE-Zrk
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>53.8759 12.889</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DK-Eng
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.6905 12.1918</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DK-Fou
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>56.4842 9.5872</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">DK-Sor
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>55.4859 11.6446</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">ES-Amo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.8336 -2.2523</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">ES-LJu
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.9266 -2.7521</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">ES-LgS
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>37.0979 -2.9658</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">ES-Ln2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.9695 -3.4758</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FI-Hyy
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>61.8474 24.2948</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FI-Jok
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>60.8986 23.5134</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FI-Let
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>60.6418 23.9595</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FI-Lom
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>67.9972 24.2092</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FI-Si2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>61.8372 24.1967</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FI-Sii
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>61.8327 24.1928</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FI-Sod
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>67.3624 26.6386</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FR-Fon
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>48.4764 2.7801</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FR-Gri
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>48.8442 1.9519</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FR-LBr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.7171 -0.7693</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FR-LGt
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>47.3229 2.2841</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">FR-Pue
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>43.7413 3.5957</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">GF-Guy
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>5.2788 -52.9249</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">GH-Ank
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>5.2685 -2.6942</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">GL-NuF
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>64.1308 -51.3861</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">GL-ZaF
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>74.4814 -20.5545</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">GL-ZaH
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>74.4733 -20.5503</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">HK-MPM
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>22.4982 114.0292</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">ID-Pag
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-2.32 113.9</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-BCi
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>40.5237 14.9574</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-CA1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.3804 12.0266</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-CA2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.3772 12.026</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-CA3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.38 12.0222</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Cas
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.07 8.7175</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Col
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.8494 13.5881</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Cp2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.7043 12.3573</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Cpz
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.7052 12.3761</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Isp
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.8126 8.6336</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-La2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.9542 11.2853</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Lav
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.9562 11.2813</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-MBo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.0147 11.0458</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Noe
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>40.6062 8.1517</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-PT1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.2009 9.061</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Ren
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.5869 11.4337</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Ro1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.4081 11.93</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Ro2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.3903 11.9209</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-SR2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>43.732 10.2909</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-SRo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>43.7279 10.2844</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">IT-Tor
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.8444 7.5781</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">JP-BBY
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>43.323 141.8107</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">JP-MBF
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.3869 142.3186</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">JP-Mse
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.0539 140.0269</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">JP-SMF
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>35.2617 137.0788</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">JP-SwL
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.0466 138.1084</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">KR-CRK
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.2013 127.2506</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">MY-MLM
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>1.4536 111.1495</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">MY-PSO
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>2.973 102.3062</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">NL-Hor
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>52.2403 5.0713</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">NL-Loo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>52.1666 5.7436</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">NZ-Kop
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-37.3879 175.5539</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">PA-SPn
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>9.3181 -79.6346</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">PA-SPs
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>9.3138 -79.6314</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">PH-RiF
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>14.1412 121.2653</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Ch2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>68.6169 161.3509</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Che
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>68.613 161.3414</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Cok
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>70.8291 147.4943</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Fy2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>56.4476 32.9019</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Fyo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>56.4615 32.9221</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Ha1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>54.7252 90.0022</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Sam
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>72.3738 126.4958</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-SkP
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>62.255 129.168</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Tks
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>71.5943 128.8878</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">RU-Vrk
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>67.0547 62.9405</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">SD-Dem
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>13.2829 30.4783</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">SE-Deg
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>64.182 19.5565</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">SE-St1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>68.3541 19.0503</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">SJ-Adv
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>78.186 15.923</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">SJ-Blv
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>78.9216 11.8311</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">SN-Dhr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>15.4028 -15.4322</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">UK-LBT
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>51.5215 -0.1389</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-A03
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>70.4953 -149.8823</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-A10
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>71.3242 -156.6149</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-AR1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.4267 -99.42</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-AR2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.6358 -99.5975</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-ARM
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.6058 -97.4888</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-ARb
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>35.5497 -98.0402</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-ARc
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>35.5465 -98.04</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Atq
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>70.4696 -157.4089</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-BZB
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>64.6955 -148.3208</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-BZF
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>64.7013 -148.3121</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-BZS
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>64.6963 -148.3235</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Beo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>71.281 -156.6123</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Bes
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>71.2809 -156.5965</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Bi1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.0992 -121.4993</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Bi2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.1091 -121.5351</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Blo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.8953 -120.6328</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-CRT
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.6285 -83.3471</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Cop
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.09 -109.39</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-DPW
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>28.0521 -81.4361</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-EDN
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>37.6156 -122.114</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-EML
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>63.8784 -149.2536</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-GBT
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.3658 -106.2397</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-GLE
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.3665 -106.2399</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Goo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>34.2547 -89.8735</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-HRA
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>34.5852 -91.7517</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-HRC
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>34.5888 -91.7517</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Ha1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>42.5378 -72.1715</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Ho1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.2041 -68.7402</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-IB2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.8406 -88.241</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-ICs
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>68.6058 -149.311</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Ivo
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>68.4865 -155.7503</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-KS1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>28.4583 -80.6709</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-KS2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>28.6086 -80.6715</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-LA1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>29.5013 -90.4449</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-LA2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>29.8587 -90.2869</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-LWW
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>34.9604 -97.9789</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Lin
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>36.3566 -119.0922</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Los
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.0827 -89.9792</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-MAC
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>27.1632 -81.1873</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-MMS
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>39.3232 -86.4131</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-MRM
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>40.8164 -74.0435</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Me1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.5794 -121.5</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Me2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.4526 -121.5589</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Me3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.3154 -121.6078</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Me4
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.4992 -121.6224</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Me5
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.4372 -121.5668</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Me6
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>44.3233 -121.6078</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Myb
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.0499 -121.765</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-NC4
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>35.7879 -75.9038</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-NGB
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>71.28 -156.6092</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-NGC
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>64.8618 -163.7002</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-NR1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>40.0329 -105.5464</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Ne1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.1651 -96.4766</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Ne2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.1649 -96.4701</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Ne3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.1797 -96.4397</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-ORv
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>40.0201 -83.0183</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-OWC
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.3795 -82.5125</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Oho
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.5545 -83.8438</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-PFa
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.9459 -90.2723</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Prr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>65.1237 -147.4876</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-SRC
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>31.9083 -110.8395</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-SRG
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>31.7894 -110.8277</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-SRM
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>31.8214 -110.8661</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Snd
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.0366 -121.754</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Sne
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.0369 -121.7547</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Srr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.2006 -122.0264</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-StJ
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>39.0882 -75.4372</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Sta
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.3966 -106.8024</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Syv
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.242 -89.3477</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Ton
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.4309 -120.966</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Tw1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.1074 -121.6469</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Tw2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.0969 -121.6365</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Tw3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.1152 -121.6469</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Tw4
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.1027 -121.6413</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Tw5
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.1072 -121.6426</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Twt
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.1087 -121.6531</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-UMB
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.5598 -84.7138</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-UMd
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.5625 -84.6975</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Uaf
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>64.8663 -147.8555</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Var
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>38.4133 -120.9508</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-WCr
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>45.8059 -90.0799</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-WPT
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>41.4646 -82.9962</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Whs
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>31.7438 -110.0522</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi0
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.6188 -91.0814</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi1
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.7305 -91.2329</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi2
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.6869 -91.1528</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi3
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.6347 -91.0987</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi4
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.7393 -91.1663</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi5
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.6531 -91.0858</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi6
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.6249 -91.2982</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi7
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.6491 -91.0693</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi8
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.7223 -91.2524</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wi9
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>46.7385 -91.0746</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">US-Wkg
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>31.7365 -109.9419</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">ZA-Kru
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-25.0197 31.4969</gml:pos>
+                        </gml:Point>
+                        <gml:Point gml:id="point_1">
+                          <gml:identifier codeSpace="https://appeears.earthdatacloud.nasa.gov/">ZM-Mon
+                          </gml:identifier>
+                          <gml:name></gml:name>
+                          <gml:pos>-15.4391 23.2525</gml:pos>
+                        </gml:Point>
+                      </gml:pointMembers>
+                    </gml:MultiPoint>
+                  </gmd:polygon>
+                </gmd:EX_BoundingPolygon>
+              </gmd:geographicElement>
+              <gmd:temporalElement>
+                <gmd:EX_TemporalExtent>
+                  <gmd:extent>
+                    <gml:TimeInstant gml:id="StartDate">
+                      <gml:name>Start Date</gml:name>
+                      <gml:timePosition>2000-01-01</gml:timePosition>
+                    </gml:TimeInstant>
+                  </gmd:extent>
+                </gmd:EX_TemporalExtent>
+              </gmd:temporalElement>
+              <gmd:temporalElement>
+                <gmd:EX_TemporalExtent>
+                  <gmd:extent>
+                    <gml:TimeInstant gml:id="EndDate">
+                      <gml:timePosition>2026-01-17</gml:timePosition>
+                    </gml:TimeInstant>
+                  </gmd:extent>
+                </gmd:EX_TemporalExtent>
+              </gmd:temporalElement>
+            </gmd:EX_Extent>
+          </gmd:extent>
+        </gmd:DQ_Scope>
+      </gmd:scope>
+      <gmd:lineage>
+        <gmd:LI_Lineage>
+          <gmd:processStep>
+            <gmi:LE_ProcessStep>
+              <gmd:description>
+                <gco:CharacterString>Software Information</gco:CharacterString>
+              </gmd:description>
+              <gmi:processingInformation>
+                <gmi:LE_Processing>
+                  <gmi:identifier>
+                    <gmd:MD_Identifier>
+                      <gmd:code>
+                        <gmx:Anchor
+                          xlink:href="https://appeears.earthdatacloud.nasa.gov/"
+                          xlink:title="AppEEARS"
+                          xlink:actuate="onRequest">
+                            Application for Extracting and Exploring Analysis Ready Samples
+                        </gmx:Anchor>
+                      </gmd:code>
+                    </gmd:MD_Identifier>
+                  </gmi:identifier>
+                  <gmi:softwareReference>
+                    <gmd:CI_Citation>
+                      <gmd:title>
+                        <gco:CharacterString>Application for Extracting and Exploring Analysis Ready Samples</gco:CharacterString>
+                      </gmd:title>
+                      <gmd:alternateTitle>
+                        <gco:CharacterString>AppEEARS</gco:CharacterString>
+                      </gmd:alternateTitle>
+                      <gmd:date>
+                        <gmd:CI_Date>
+                          <gmd:date>
+                            <gco:Date>2026-01-19</gco:Date>
+                          </gmd:date>
+                          <gmd:dateType>
+                            <gmd:CI_DateTypeCode
+                              codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                              codeListValue="creation">creation
+                            </gmd:CI_DateTypeCode>
+                          </gmd:dateType>
+                        </gmd:CI_Date>
+                      </gmd:date>
+                      <gmd:edition>
+                        <gco:CharacterString>3.107</gco:CharacterString>
+                      </gmd:edition>
+                    </gmd:CI_Citation>
+                  </gmi:softwareReference>
+                </gmi:LE_Processing>
+              </gmi:processingInformation>
+            </gmi:LE_ProcessStep>
+          </gmd:processStep>
+          <gmd:source>
+            <gmi:LE_Source>
+              <gmd:sourceCitation>
+                <gmd:CI_Citation>
+                  <gmd:title>
+                    <gmx:FileName src="LE-sites-granule-list.txt">Text file with data pool URLs for all source granules used in the extraction</gmx:FileName>
+                  </gmd:title>
+                  <gmd:date>
+                    <gmd:CI_Date>
+                      <gmd:date>
+                        <gco:Date>2026-01-19</gco:Date>
+                      </gmd:date>
+                      <gmd:dateType>
+                        <gmd:CI_DateTypeCode
+                          codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                          codeListValue="creation">creation
+                        </gmd:CI_DateTypeCode>
+                      </gmd:dateType>
+                    </gmd:CI_Date>
+                  </gmd:date>
+                </gmd:CI_Citation>
+              </gmd:sourceCitation>
+            </gmi:LE_Source>
+          </gmd:source>
+        </gmd:LI_Lineage>
+      </gmd:lineage>
+    </gmd:DQ_DataQuality>
+  </gmd:dataQualityInfo>
+
+  <!-- RESOURCE AND METADATA CONSTRAINTS -->
+  <gmd:metadataConstraints>
+    <gmd:MD_LegalConstraints>
+      <gmd:useLimitation>
+        <gco:CharacterString>Disclaimer - While every effort has been made to ensure that these data are accurate
+          and reliable within the limits of the current state of the art, NASA cannot assume liability for any
+          damages caused by any errors or omissions in the data, nor as a result of the failure of the data to
+          function on a particular system. NASA makes no warranty, expressed or implied, nor does the fact of
+          distribution constitute such a warranty.
+        </gco:CharacterString>
+      </gmd:useLimitation>
+    </gmd:MD_LegalConstraints>
+  </gmd:metadataConstraints>
+
+</gmi:MI_Metadata>

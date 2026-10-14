@@ -1,0 +1,16 @@
+import os
+import pandas as pd
+
+path_to_fluxnet_metadata = 'site_data.csv' # original metadata from fluxnet
+path_to_fluxnet_hh_dir = 'dir_fluxnet_hh_selected' #'FLUXNET_UNZIPPED/HH'
+path_to_fluxnet_dd_dir = 'dir_fluxnet_dd_selected' #'FLUXNET_UNZIPPED/DD'
+path_to_anomalies_with_storm_info = 'output_anomalies/RF_DT_targetscaled_event.csv'
+
+meta = pd.read_csv(path_to_fluxnet_metadata)
+dd_files = os.listdir(path_to_fluxnet_dd_dir)
+
+print("Example filenames:")
+print(dd_files[:10])
+
+print("\nExample metadata SITE_ID values:")
+print(meta.SITE_ID.unique()[:10])

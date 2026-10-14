@@ -1,0 +1,7 @@
+{
+  "best_event_path": "/Users/pavan/Documents/ERICA RESEARCH/testing/wet-extremes-photosynthesis-main/new_runs/RF/run_with_lagged_et01/event.csv",
+  "best_test_path": "/Users/pavan/Documents/ERICA RESEARCH/testing/wet-extremes-photosynthesis-main/new_runs/RF/run_with_lagged_et01/test.csv",
+  "output_findevents_dir": "/Users/pavan/Documents/ERICA RESEARCH/testing/wet-extremes-photosynthesis-main/output_findevents",
+  "out_name": "RF_run_with_lagged_et01",
+  "metadata_path": "metadata_total.csv"
+}

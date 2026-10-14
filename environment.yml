@@ -1,0 +1,9 @@
+name: swc-le
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - pandas
+  - ipykernel
+prefix: /opt/anaconda3/envs/swc-le

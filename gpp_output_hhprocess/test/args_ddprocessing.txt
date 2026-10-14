@@ -1,0 +1,5 @@
+{
+  "findevents_dir": "gpp_output_hhprocess/test",
+  "event_filename": "allsites_event.csv",
+  "training_filename": "allsites_training.csv"
+}

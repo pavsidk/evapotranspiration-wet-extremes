@@ -1,0 +1,1 @@
+SITE_ID, pre_gapfill_removal, swc_removed, temp_removed, le_removed, vpd_removed

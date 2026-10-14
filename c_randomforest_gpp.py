@@ -1,0 +1,220 @@
+import pandas as pd
+import numpy as np
+import os
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+import json
+from sklearn.model_selection import cross_val_score, KFold, GridSearchCV, RandomizedSearchCV
+rng = np.random.default_rng()
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import RandomizedSearchCV, KFold, cross_val_score
+import argparse
+import sys
+
+
+def main():
+
+    args = import_args()
+    run_name = args.run_name
+    
+    if args.include_gpp_feature.lower() == 'true':
+        features = ['SW_IN_F', 'TA_F', 'RH', 'WS_F', 'LAI', 'P_F_lag_sum', 'GPP_lag_mean'] #, 'GPP_April']
+    else:
+        features = ['SW_IN_F', 'TA_F', 'RH', 'WS_F', 'LAI', 'P_F_lag_sum']
+
+    target = args.target
+
+    train_path = 'gpp_output_hhprocess/test/allsites_training_dd_clipped.csv'
+    event_path = 'gpp_output_hhprocess/test/allsites_event_dd_clipped.csv'
+    train_all = pd.read_csv(train_path)
+    event_all = pd.read_csv(event_path)
+    
+
+
+    test_split_frac = 0.25
+    search_iters = 10 #100
+    random_state = 1
+    inner_cv_splits = 5 #10
+    outer_cv_splits = 5 #10 
+    #change splits
+    
+    # Make a directory to hold the results
+    rf_runs_dir = 'new_runs/RF'
+    dir_name = rf_runs_dir + '/' + run_name
+    print(f"Saving random forest results to {dir_name}")
+    if not os.path.exists(dir_name): os.makedirs(dir_name)
+
+    # Save a text file with the necessary parameters
+    args = {"dir_name":dir_name,
+            "run_name":run_name,
+            "features":features,
+            "target":target,
+            "train_path":train_path,
+            "event_path":event_path,
+            "random_state":random_state,
+            "search_iters":search_iters,
+            "test_split_frac":test_split_frac,
+            "inner_cv_splits": inner_cv_splits,
+            "outer_cv_splits": outer_cv_splits
+            }
+    with open(dir_name + '/arguments.txt', 'w') as f: f.write(json.dumps(args))
+
+
+    # Make the random grid to search over
+    ## Gridsearch from https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
+    n_estimators = [5, 10, 50, 75, 100, 150, 200, 250, 300, 400] #SEARCH UP
+    max_features = [2, 4, 6, 1.0, 'sqrt']
+    max_depth = [None, 3, 6, 9, 12, 15, 18]
+    min_samples_split = [2, 5, 10]
+    min_samples_leaf = [1, 2, 4, 8, 16]
+    bootstrap = [True, False]
+    random_grid = {'n_estimators': n_estimators,
+                'max_features': max_features,
+                'max_depth': max_depth,
+                'min_samples_split': min_samples_split,
+                'min_samples_leaf': min_samples_leaf,
+                'bootstrap': bootstrap}
+    with open(dir_name + '/gridsearch.txt', 'w') as f: f.write(json.dumps(random_grid))
+
+    print("Number of NaNs of each feature:")
+    print(train_all[features].isnull().sum(), '\n')
+
+    test_final, event_final, scores = randomforest_all_sites(train_all, event_all, features, target = target,
+                                                                       random_grid = random_grid, inner_cv_splits = inner_cv_splits, outer_cv_splits = outer_cv_splits,
+                                                                         test_split_frac = test_split_frac, search_iters = search_iters, random_state = random_state)
+    
+   
+    # save rf results
+    test_final.to_csv(f'{rf_runs_dir}/{run_name}/test.csv')
+    event_final.to_csv(f'{rf_runs_dir}/{run_name}/event.csv')
+    scores.to_csv(f'{rf_runs_dir}/{run_name}/performance.csv')
+
+
+def import_args():
+    parser = argparse.ArgumentParser('Process half-hourly fluxnet data for extreme SWC')
+    parser.add_argument('-include_gpp_feature', type=str, default='True')
+    parser.add_argument('-target', type=str, default='GPP_DT_VUT_REF')   #DONT NEED ANYMORE FOR LE
+    parser.add_argument('-run_name', type=str, default='gpp_analysis') #changed from default_run_name to run_with_lagged
+    args = parser.parse_args()
+    return args
+
+def randomforest_all_sites(train_df, event_df, features, target, random_grid, inner_cv_splits, outer_cv_splits, test_split_frac = 0.25, search_iters = 25, random_state = 1):
+    # Lists for storing results
+    site = []
+    test_score = []
+    train_score = []
+    event_score = []
+    cv_score_mean = []
+    cv_score_std = []
+    best_model = []
+    
+    # Final train df with all sites
+    test_final = pd.DataFrame()
+    event_final = pd.DataFrame()
+
+    # Iterate through sites
+    sites = train_df.SITE_ID.unique()
+    for s in sites:
+        train = train_df[train_df['SITE_ID'] == s].copy()
+        event = event_df[event_df['SITE_ID'] == s].copy()
+
+        if event.shape[0] > 2:
+            site.append(s)
+            print(s)
+
+            idx = np.arange(len(train))
+            idx_train, idx_test = train_test_split(
+                idx, test_size=test_split_frac, shuffle=True, random_state=random_state
+            )
+
+            train_rows = train.iloc[idx_train]
+            test_results = train.iloc[idx_test].copy()
+
+            X_train = train_rows[features]
+            y_train = train_rows[[target]].to_numpy()
+
+            X_test = test_results[features]
+            y_test = test_results[[target]].to_numpy()
+
+            # Apply Minmax scaler to X and y
+            scaler_features = MinMaxScaler()
+            scaler_target = MinMaxScaler()
+
+            X_train = scaler_features.fit_transform(X_train)
+            y_train = scaler_target.fit_transform(y_train) # because there's only one column, need to be array of shape (-1,1)
+
+            X_test = scaler_features.transform(X_test)
+            y_test = scaler_target.transform(y_test)
+            
+            X_event = scaler_features.transform(event[features])
+            y_event = scaler_target.transform(np.array(event[target]).reshape(-1,1))
+
+            # Make sure ys are good shape
+            y_train = y_train.ravel()
+            y_test = y_test.ravel()
+            y_event = y_event.ravel()
+
+            print(X_train.shape, y_train.shape)
+
+            # Inner and outer loop cross-validation
+            inner_cv = KFold(n_splits = inner_cv_splits, shuffle = True, random_state = random_state)
+            outer_cv = KFold(n_splits = outer_cv_splits, shuffle = True, random_state = random_state)
+
+            # Define the model
+            estimator = RandomForestRegressor(n_jobs=-1) #using all cores
+
+            # Search the space defined by the gridsearch random_grid dictionary
+            search = RandomizedSearchCV(estimator = estimator, #FOR HYPERPARAMETER TUNING
+                                        param_distributions = random_grid,
+                                        cv = inner_cv,
+                                        n_iter = search_iters,
+                                        random_state = random_state,
+                                        verbose = 1,
+                                        n_jobs = -1 #for using all cores
+                                        )
+
+            # Perform cross-validation with inner and outer cv
+            scores = cross_val_score(search, X_train, y_train, scoring = 'r2', cv = outer_cv)
+            cv_score_mean.append(scores.mean())
+            cv_score_std.append(scores.std())
+
+            # Fit search with X and y
+            reg = search.fit(X_train, y_train)
+
+            # Save the best model and model score
+            best_model.append(reg.best_params_)            
+            train_score.append(reg.score(X_train, y_train))
+            test_score.append(reg.score(X_test, y_test))
+            event_score.append(reg.score(X_event, y_event))
+
+            # Get an event and test dataframe to add predictions onto
+            # Use train_test_split with the same random seed to get the full dataframe for testing
+            # Do train_test_split to get train and test datasets to begin with
+            event_results = event.copy()
+
+            # Save predictions for test and inverse scale
+            test_results['predicted_scaled'] = reg.predict(X_test)
+            test_results['predicted'] = scaler_target.inverse_transform(reg.predict(X_test).reshape(-1,1))
+            test_results['actual_scaled'] = y_test
+            test_results['actual'] = scaler_target.inverse_transform(y_test.reshape(-1,1))
+
+            # Save predictions for event and inverse scale
+            event_results['predicted_scaled'] = reg.predict(X_event)
+            event_results['predicted'] = scaler_target.inverse_transform(reg.predict(X_event).reshape(-1,1))
+            event_results['actual_scaled'] = y_event
+            event_results['actual'] = scaler_target.inverse_transform(y_event.reshape(-1,1))
+
+            test_final = pd.concat([test_final, test_results])
+            event_final = pd.concat([event_final, event_results])
+        
+
+    # Make actual - predicted column
+    test_final['actual - predicted'] = test_final['actual'] - test_final['predicted']
+    event_final['actual - predicted'] = event_final['actual'] - event_final['predicted']
+
+    # Make df of scores
+    scores = pd.DataFrame({"SITE_ID":site, "train_score":train_score, "test_score":test_score, "event_score":event_score, "cv_score_mean":cv_score_mean, "cv_score_std":cv_score_std, "best_params":best_model})
+    return test_final, event_final, scores
+
+if __name__ == '__main__':
+    main()

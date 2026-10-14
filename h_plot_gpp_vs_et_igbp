@@ -1,0 +1,108 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+et = pd.read_csv(
+    "runs/RF/RF_run_with_lagged_et02/events_iqr.csv",
+    low_memory=False
+)
+gpp = pd.read_csv(
+    "gpp_paper/revision_lagged_gpp_12_remove_medium/events_iqr.csv",
+    low_memory=False
+)
+
+gpp_sites = set(gpp[gpp["R2"] > 0.7]["SITE_ID"].unique())
+et_sites  = set(et[et["R2"]  > 0.7]["SITE_ID"].unique())
+shared_sites = gpp_sites & et_sites
+gpp_shared = gpp[gpp["SITE_ID"].isin(shared_sites)]
+et_shared  = et[et["SITE_ID"].isin(shared_sites)]
+
+merged = pd.merge(
+    gpp_shared,
+    et_shared,
+    on=["SITE_ID", "day"],
+    how="inner",
+    suffixes=("_gpp", "_et")
+)
+
+if "IGBP_gpp" in merged.columns:
+    igbp_col = "IGBP_gpp"
+elif "IGBP_et" in merged.columns:
+    igbp_col = "IGBP_et"
+else:
+    raise ValueError("No IGBP column found")
+
+merged = merged.dropna(subset=["anomaly_norm_gpp", "anomaly_norm_et", igbp_col])
+
+color_map = {
+    "ENF": "#1b5e20",
+    "DBF": "#2e7d32",
+    "EBF": "#004d40",
+    "MF":  "#66bb6a",
+    "GRA": "#d4a373",
+    "SAV": "#f4a261",
+    "WSA": "#bc6c25",
+    "CSH": "#6a994e",
+    "OSH": "#a7c957"
+}
+
+igbp_full_names = {
+    "ENF": "Evergreen Needleleaf Forest",
+    "DBF": "Deciduous Broadleaf Forest",
+    "EBF": "Evergreen Broadleaf Forest",
+    "MF":  "Mixed Forest",
+    "GRA": "Grasslands",
+    "SAV": "Savannas",
+    "WSA": "Woody Savannas",
+    "CSH": "Closed Shrubland",
+    "OSH": "Open Shrubland"
+}
+
+output_dir = "figs/NEW_FIGS/igbp_split_clean"
+os.makedirs(output_dir, exist_ok=True)
+
+# loop through each biome
+for biome in merged[igbp_col].unique():
+    
+    df_biome = merged[merged[igbp_col] == biome]
+    
+    x = df_biome["anomaly_norm_gpp"]
+    y = df_biome["anomaly_norm_et"]
+    
+    if len(x) < 10:
+        continue
+
+    # Regression
+    m, b = np.polyfit(x, y, 1)
+    y_pred = m * x + b
+
+    # R² calculation
+    ss_res = np.sum((y - y_pred)**2)
+    ss_tot = np.sum((y - np.mean(y))**2)
+    r2 = 1 - (ss_res / ss_tot)
+
+    color = color_map.get(biome, "gray")
+    full_name = igbp_full_names.get(biome, biome)
+
+    plt.figure(figsize=(6, 5))
+    plt.scatter(x, y, alpha=0.5, color=color)
+    x_line = np.linspace(x.min(), x.max(), 100)
+    plt.plot(x_line, m * x_line + b, color=color, linewidth=2)
+
+    plt.xlabel("Normalized GPP Anomaly")
+    plt.ylabel("Normalized ET Anomaly")
+    plt.title(f"{full_name}: GPP vs ET")
+    plt.text(
+        0.05, 0.9,
+        f"$R^2$ = {r2:.2f}",
+        transform=plt.gca().transAxes,
+        fontsize=11
+    )
+    plt.grid(True)
+    plt.tight_layout()
+    filename = f"{output_dir}/gpp_vs_et_{biome}.png"
+    plt.savefig(filename, dpi=300)
+    plt.close()
+
+    print(f"{full_name}: n={len(x)}, R²={r2:.2f}")

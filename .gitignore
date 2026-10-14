@@ -1,0 +1,9 @@
+*.csv
+*.png
+*.svg
+*.zip
+.Rhistory
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
